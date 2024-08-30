@@ -1,10 +1,17 @@
+import { Provider } from "react-redux";
+import Body from "./components/Body";
+import appStore from "./utilis/appStore";
 
-import './App.css';
 
 function App() {
   return (
     <div className="font-semibold">
-      Hello Everyone
+      <Provider store={appStore}>
+      <Body/>
+      </Provider>
+      
+      
+     
     </div>
   );
 }
