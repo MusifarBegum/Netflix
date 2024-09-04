@@ -5,6 +5,7 @@ import {createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile
 import { auth } from '../utilis/firebase';
 import { addUser } from '../utilis/userSlice';
 import { useDispatch } from 'react-redux';
+import { NETFLIX_BG } from '../utilis/constants';
 
 
 const Login = () => {
@@ -69,7 +70,7 @@ const Login = () => {
     <div >
         <Header/>
         <div className='absolute'>
-        <img src='https://assets.nflxext.com/ffe/siteui/vlv3/259422c0-c399-4047-baf2-44bac5612ac1/435b6df3-53e6-4b88-b1be-0f3804e210a1/IN-en-20240819-POP_SIGNUP_TWO_WEEKS-perspective_WEB_f4be2d60-6f77-49e2-aaf7-6327ac5a3a95_large.jpg' alt='logo'/>
+        <img src={NETFLIX_BG} alt='logo'/>
         </div>
         
         <form onSubmit={(e)=>e.preventDefault()} className='w-3/12 absolute p-12  bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-80'>

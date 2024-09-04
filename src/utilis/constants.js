@@ -8,3 +8,9 @@ export const API_OPTIONS= {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMWIzZDhlMDc2OWJlYmZlMmNiMjM2MTE3N2MzN2IzMyIsIm5iZiI6MTcyNDkzNzM0NC42ODQzNTEsInN1YiI6IjY2Y2M4YjNmMzlmYjExOWQxNmQ4NWFhOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.muRdFo0HsJWYmnjQTj3ej1II2ub81DOdh1IxrJ3W0Ik'
     }
   };
+
+  export const POSTER_CDN_URL ="https://image.tmdb.org/t/p/w780";
+
+  export const NETFLIX_BG ="https://assets.nflxext.com/ffe/siteui/vlv3/259422c0-c399-4047-baf2-44bac5612ac1/435b6df3-53e6-4b88-b1be-0f3804e210a1/IN-en-20240819-POP_SIGNUP_TWO_WEEKS-perspective_WEB_f4be2d60-6f77-49e2-aaf7-6327ac5a3a95_large.jpg";
+
+  export const Supported_Lang = [{identifier:"en", name:"English"},{identifier:"hindi", name:"Hindi"},{identifier:"greek", name:"Greek"}]
