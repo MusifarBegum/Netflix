@@ -10,9 +10,12 @@ const gptSlice = createSlice ({
         toggleGptSearchView:(state)=>{
            state.gptSearch = !state.gptSearch;
         },
+       
+        
+
     }
 })
 
 
-export  const {toggleGptSearchView} = gptSlice.actions;
+export  const {toggleGptSearchView,toggleShowTrailer} = gptSlice.actions;
 export default gptSlice.reducer;

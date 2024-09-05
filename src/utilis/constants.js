@@ -13,4 +13,14 @@ export const API_OPTIONS= {
 
   export const NETFLIX_BG ="https://assets.nflxext.com/ffe/siteui/vlv3/259422c0-c399-4047-baf2-44bac5612ac1/435b6df3-53e6-4b88-b1be-0f3804e210a1/IN-en-20240819-POP_SIGNUP_TWO_WEEKS-perspective_WEB_f4be2d60-6f77-49e2-aaf7-6327ac5a3a95_large.jpg";
 
-  export const Supported_Lang = [{identifier:"en", name:"English"},{identifier:"hindi", name:"Hindi"},{identifier:"greek", name:"Greek"}]
+  export const Supported_Lang = [{identifier:"en", name:"English"},{identifier:"hindi", name:"Hindi"},{identifier:"greek", name:"Greek"}];
+
+  export const GPT_KEY ="sk-Nz10k6SRCySqPa0Do325AKoPGRFikpeytHrHaXak1tT3BlbkFJXr1YUnGkxQh1_669XTTTOZafeMdujoWDYj2SPcBK8A";
+
+  export const  settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 6,
+    slidesToScroll: 1
+  };
