@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import openai from '../utilis/openai';
 import { API_OPTIONS } from '../utilis/constants';
 import { addSearchMovies } from '../utilis/movieSlice';
+import { addSearchText } from '../utilis/configSlice';
 
 const GptSearchBar = () => {
 
@@ -34,6 +35,7 @@ const handleGptSearchClick = async () => {
   console.log (json)
         
   dispatch(addSearchMovies(json?.results))
+  dispatch(addSearchText(searchText.current.value))
 
 }
 

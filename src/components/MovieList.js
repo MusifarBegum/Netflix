@@ -19,7 +19,7 @@ const MovieList = ({title,movies}) => {
       poster={movie.poster_path}
       title={movie.title}
       description={movie.overview}
-      id={movie.id}
+      movieid={movie.id}
     />
   ))}
 </Slider>

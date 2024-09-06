@@ -64,7 +64,7 @@ const changeSuggestedLanguage = (e)=>{
    </select>)}
   
   
-   <button className='p-2 m-2 px-4 mx-4  bg-gray-500 text-white hover:bg-gray-400 font-bold rounded-sm' onClick={showGptSearch}>{gptSearch?"HomePage" : "GPT Search"}</button>
+   <button className='p-2 m-2 px-4 mx-4  bg-gray-500 text-white hover:bg-gray-400 font-bold rounded-sm' onClick={showGptSearch}>{gptSearch?"HomePage" : "Search"}</button>
    <img className=' w-12 h-12' src="https://occ-0-2086-2164.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABXYofKdCJceEP7pdxcEZ9wt80GsxEyXIbnG_QM8znksNz3JexvRbDLr0_AcNKr2SJtT-MLr1eCOA-e7xlDHsx4Jmmsi5HL8.png?r=1d4" alt='profile-icon'></img>
     <span className='text-white w- m-2' onClick={toggleDropdown}>▼</span>
     {isOpen && (
