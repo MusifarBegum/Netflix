@@ -12,7 +12,6 @@ const Header = () => {
   
   const gptSearch= useSelector((store)=>store.gpt?.gptSearch)
   const [isOpen, setIsOpen]= useState(false);
-  const Navigate = useNavigate();
   const user= useSelector((store)=>store.user)
   const navigate = useNavigate();
   const dispatch= useDispatch();
@@ -24,7 +23,7 @@ const Header = () => {
  const handleSignOut= ()=>{
   signOut(auth).then(() => {
     // Sign-out successful.
-    Navigate("/")
+    navigate("/")
 
   }).catch((error) => {
     // An error happened.
@@ -44,7 +43,7 @@ const Header = () => {
       }
     });
      return ()=>unsubscribe();
-},[])
+},[dispatch, navigate])
 
 const showGptSearch = ()=>{
   dispatch(toggleGptSearchView())

@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import language from '../utilis/language';
 import { useDispatch, useSelector } from 'react-redux';
-import openai from '../utilis/openai';
 import { API_OPTIONS } from '../utilis/constants';
 import { addSearchMovies } from '../utilis/movieSlice';
 import { addSearchText } from '../utilis/configSlice';
@@ -12,22 +11,6 @@ const GptSearchBar = () => {
     const showlang = useSelector((store)=>store?.config?.lang);
     const dispatch = useDispatch();
 
-//  const handleGptSearchClick = async () => {
-
-//   const gptQuery = "Give me a movie suggestion based system of my query" + searchText.current.value +
-//       "Give me top 5 movies with comma separated, Please refer to this example : 3Idiots,Rang De Basanti,Zindagi Na Milegi Dobara,Chhichhore,Sanju";
-
-//   const gptResults = await openai.chat.completions.create({
-//     messages: [{ role: "user", content: gptQuery }],
-//     model: "gpt-3.5-turbo",
-//   });
-
-//   if (!gptResults.choices) {
-//     // TODO: Write Error Handling
-//   }
-
-//   console.log(gptResults.choices?.[0]?.message?.content);
-// };
 
 const handleGptSearchClick = async () => {
   const data = await fetch("https://api.themoviedb.org/3/search/movie?query="+ searchText.current.value+"&include_adult=false&language=en-US&page=1", API_OPTIONS);

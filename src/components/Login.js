@@ -19,7 +19,6 @@ const Login = () => {
     const email = useRef(null);
     const password = useRef(null);
     const name = useRef(null);
-    const nationality = useRef(null);
        
     const handleButton= ()=>{
         //validate the form validations
@@ -49,20 +48,28 @@ const Login = () => {
                
              })
              .catch((error) => {
-               const errorCode = error.code;
-               const errorMessage = error.message;
+              // An error occurred
              });
         }else{
             //SignIn Form
             signInWithEmailAndPassword (auth, email.current.value,password.current.value)
             .then((userCredential) => {
              const user = userCredential.user;
+             updateProfile(user, {
+              displayName: name.current.value
+            }).then(() => {
+              // Profile updated!
+              const {uid,email,displayName} = auth.currentUser;
+              dispatch(addUser({uid:uid,email:email,displayName:displayName}));
+              
              console.log(user);
-   
+            }).catch((error) => {
+              // An error occurred
+              // ...
+            });
   })
   .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
+    // An error occurred
   });
         }
     }

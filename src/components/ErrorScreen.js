@@ -9,7 +9,7 @@ const ErrorScreen = () => {
   return (
     <div className='bg-black text-center h-fixed opacity-85'>
       
-        <p className='text-xl font-medium text-white'>{language[showlang].searchText+searchValue+language[showlang].searchText1}</p>
+        <p className='text-xl font-medium text-white'>{language[showlang].searchText + ' ' +searchValue + ' ' +language[showlang].searchText1}</p>
         <p className="mt-4 text-left m-auto  max-w-md text-xl font-medium text-white">{language[showlang].suggestions}</p>
         <ul className='list-disc list-inside text-left ml-auto mr-auto max-w-md text-sm font-light text-white py-4'>
             <li>{language[showlang].list1}</li>
